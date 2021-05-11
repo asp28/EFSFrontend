@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.ankeetpatel.encryptedfilesystem.frontendui.controllers.InfoviewController">
+    <children>
+        <Pane prefHeight="600.0" prefWidth="75.0" styleClass="pane">
+            <children>
+                <JFXButton fx:id="HomeButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="14.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="HOME" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="ExitButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="534.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="POWER_OFF" />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </Pane>
+      <Text layoutX="100.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Page">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Text>
+      <Text layoutX="100.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to view a file" wrappingWidth="627.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="126.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Login to the application using the username and password fields." />
+      <Text layoutX="126.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Use the search bar to search for a file you wish to access. If the file does not appear; either the file does not exist or you do not have access to it. If you are sure the file does exist then speak to a moderator or file owner to gain access to it." wrappingWidth="610.396484375" />
+      <Text layoutX="126.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Click on details and all the information about the file will open. Here you can download the file to view/edit. Each file will show you what level of access you have to the file." wrappingWidth="610.396484375" />
+      <Text layoutX="100.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to upload a file" wrappingWidth="627.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="126.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Login to the application using the username and password fields." />
+      <Text layoutX="126.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. On the left navigation bar, click the upload button (The one with a box and up arrow)." />
+      <Text layoutX="126.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Choose a file to upload" />
+      <Text layoutX="126.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Click confirm and it will automatically appear in your files list. Warning: Depending on the file size, it may take a few minutes to upload" wrappingWidth="610.396484375" />
+      <Text layoutX="88.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EncryptedFileSystem © 2020, Ankeet Patel, University Of Sussex" wrappingWidth="664.13671875" />
+      <Text layoutX="88.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please contact me if you want further details - asp28@sussex.ac.uk" />
+      <JFXButton fx:id="change" layoutX="594.0" layoutY="484.0" prefHeight="69.0" prefWidth="153.0" text="Change Style">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

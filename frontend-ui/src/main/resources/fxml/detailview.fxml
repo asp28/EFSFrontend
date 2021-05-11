@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.ankeetpatel.encryptedfilesystem.frontendui.controllers.detailviewController">
+   <children>
+      <AnchorPane fx:id="rootAnchor" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="background">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="75.0" styleClass="pane">
+               <children>
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="14.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="logoutButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="470.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="534.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="POWER_OFF" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="uploadButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="403.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="UPLOAD" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="rolesButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="340.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXTabPane fx:id="TabPane" layoutX="80.0" layoutY="7.0" prefHeight="587.0" prefWidth="714.0">
+               <tabs>
+                  <Tab text="Details">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="detail_filename" layoutX="8.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILENAME" wrappingWidth="689.13671875">
+                                 <font>
+                                    <Font name="System Bold" size="45.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="77.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Uploaded:">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="77.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Modified:">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton fx:id="detaildownload" layoutX="436.0" layoutY="473.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Download">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="detaildelete" layoutX="575.0" layoutY="473.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Delete">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Text fx:id="detail_uploaded" layoutX="261.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="detail_modified" layoutX="261.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="77.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access Levels:">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <TableView fx:id="detail_permissions" layoutX="241.0" layoutY="309.0" prefHeight="52.0" prefWidth="349.0">
+                                 <columns>
+                                    <TableColumn fx:id="readColumn" editable="false" prefWidth="75.0" sortable="false" text="READ" />
+                                    <TableColumn fx:id="writeColumn" editable="false" prefWidth="75.0" sortable="false" text="WRITE" />
+                                    <TableColumn fx:id="adminColumn" editable="false" prefWidth="124.0" sortable="false" text="ADMINISTRATION" />
+                                    <TableColumn fx:id="deleteColumn" editable="false" prefWidth="72.0" sortable="false" text="DELETE" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="permissionsTab" text="Permissions">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="SearchBar" focusColor="#c38d9e" labelFloat="true" layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="612.0" promptText="Enter Username">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="searchButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="638.0" layoutY="35.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21" text="Button">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" />
+                                 </graphic>
+                              </JFXButton>
+                              <AnchorPane fx:id="UserAnchorPane" layoutX="20.0" layoutY="113.0" prefHeight="422.0" prefWidth="672.0">
+                                 <children>
+                                    <JFXToggleButton fx:id="readToggle" layoutX="94.0" layoutY="100.0" text="Read" />
+                                    <JFXToggleButton fx:id="writeToggle" layoutX="216.0" layoutY="100.0" text="Write" />
+                                    <JFXToggleButton fx:id="deleteToggle" layoutX="213.0" layoutY="195.0" text="Delete" />
+                                    <JFXToggleButton fx:id="adminToggle" layoutX="90.0" layoutY="195.0" text="Admin" />
+                                    <Text fx:id="alterFileText" layoutX="19.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alter permissions for:" wrappingWidth="573.83740234375">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="filenameText" layoutX="19.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File name:" wrappingWidth="629.548828125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXButton fx:id="cancelButton" buttonType="RAISED" contentDisplay="TEXT_ONLY" layoutX="536.0" layoutY="349.0" prefHeight="52.0" prefWidth="116.0" ripplerFill="#f54f21" text="Cancel">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="updateAndChooseAnotherButton" buttonType="RAISED" contentDisplay="TEXT_ONLY" layoutX="179.0" layoutY="349.0" prefHeight="52.0" prefWidth="347.0" ripplerFill="#f54f21" text="Update and choose another">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="updateButton" buttonType="RAISED" contentDisplay="TEXT_ONLY" layoutX="13.0" layoutY="349.0" prefHeight="52.0" prefWidth="155.0" ripplerFill="#f54f21" text="Update">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

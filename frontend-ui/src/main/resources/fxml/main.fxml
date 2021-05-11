@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.co.ankeetpatel.encryptedfilesystem.frontendui.controllers.MainController">
+   <children>
+      <AnchorPane fx:id="rootAnchor" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="background">
+         <children>
+            <Text layoutX="75.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-- COMPANY LOGO --" textAlignment="CENTER" wrappingWidth="726.0637817382812">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="UsernameField" focusColor="#c38d9e" labelFloat="true" layoutX="285.0" layoutY="276.0" prefHeight="25.0" prefWidth="307.0" promptText="Username" />
+            <JFXPasswordField fx:id="PasswordField" focusColor="#c38d9e" labelFloat="true" layoutX="285.0" layoutY="338.0" prefWidth="307.0" promptText="Password" />
+            <JFXButton fx:id="LoginButton" buttonType="RAISED" layoutX="370.0" layoutY="389.0" prefHeight="45.0" prefWidth="105.0" ripplerFill="#f54f21" styleClass="-jfx-button" text="Login" />
+            <Pane prefHeight="600.0" prefWidth="75.0" styleClass="pane">
+               <children>
+                  <JFXButton fx:id="InfoButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="470.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="INFO_CIRCLE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="534.0" prefHeight="52.0" prefWidth="52.0" ripplerFill="#f54f21">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="POWER_OFF" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Text layoutX="75.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login below." textAlignment="CENTER" wrappingWidth="726.0637817382812">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
