@@ -16,3 +16,11 @@ The exit button will not work on the exported jar along side uploading and downl
 ## Notes
 
 This application was built along side a server for my Final Year Project for the University Of Sussex 2020.
+
+
+## Login details
+
+- superadmin : genericpassword1
+- testadmin : password
+- testmod : password
+- testuser : password
